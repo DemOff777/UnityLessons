@@ -155,8 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31bb36b8b64fcbd468fe4b935cad6648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distance: 7
-  _speed: 5
+  _moveSpeed: 5
 --- !u!135 &281751396
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -341,7 +340,9 @@ GameObject:
   - component: {fileID: 823360362}
   - component: {fileID: 823360361}
   - component: {fileID: 823360360}
-  - component: {fileID: 823360359}
+  - component: {fileID: 823360366}
+  - component: {fileID: 823360365}
+  - component: {fileID: 823360364}
   m_Layer: 0
   m_Name: Cube2
   m_TagString: Untagged
@@ -349,22 +350,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &823360359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 823360358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09e933462e6664d42a269ea3ce187e89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _moveSpeed: 2
-  _rotateSpeed: 40
-  _scaleIndex: 2
-  _speed: 3
 --- !u!65 &823360360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -443,6 +428,46 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &823360364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823360358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96c5241015a68624bb60fad8e580c5ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scaleIndex: 4
+  _speed: 5
+--- !u!114 &823360365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823360358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61d8ec919a31ef34299da18559b98fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rotateSpeed: 80
+--- !u!114 &823360366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823360358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31bb36b8b64fcbd468fe4b935cad6648, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveSpeed: 5
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,7 +676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96c5241015a68624bb60fad8e580c5ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scaleIndex: 2
+  _scaleIndex: 3
   _speed: 5
 --- !u!1 &1742290103
 GameObject:
