@@ -21,9 +21,26 @@ public class Counter : MonoBehaviour
 
     private void Update()
     {
+        if (_isWorking && Input.GetMouseButtonDown(0))
+        {
+            StopCoroutine(_countdown);
+        }
+
+        if (_isWorking == false && Input.GetMouseButtonDown(0))
+        {
+            StartCoroutine(_countdown);
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
-            _isWorking = !_isWorking;
+            if(_isWorking)
+            {
+                _isWorking = false;
+            }
+            else
+            {
+                _isWorking = true;
+            }
         }
     }
 
@@ -33,12 +50,6 @@ public class Counter : MonoBehaviour
 
         for (int i = _start; i >= 0; i++)
         {
-            if (_isWorking == false)
-            {
-                var waitForClick = new WaitUntil(() => Input.GetMouseButtonDown(0));
-                yield return waitForClick;
-            }
-
             DisplayCountdown(i);
             yield return wait;
         }
